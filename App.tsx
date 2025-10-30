@@ -4,13 +4,12 @@ import { Message, Sender } from './types';
 import { initChat, sendMessageStream } from './services/geminiService';
 import ChatMessage from './components/ChatMessage';
 import ChatInput from './components/ChatInput';
-import BotIcon from './components/icons/BotIcon';
 
 const App: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 'initial-message',
-      text: "Hello! I am the MindVibe Business Assistant. How can I help you with our creative services today?",
+      text: "Assalam-o-Alaikum! I'm Nadia, your creative assistant from MindVibe Works. How may I help you today?",
       sender: Sender.BOT,
     }
   ]);
@@ -87,12 +86,14 @@ const App: React.FC = () => {
     <div className="flex flex-col h-screen bg-slate-900 text-gray-100 font-sans">
       <header className="bg-slate-800/50 backdrop-blur-sm shadow-lg p-4 z-10 border-b border-slate-700">
         <div className="max-w-4xl mx-auto flex items-center space-x-4">
-          <div className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center">
-            <BotIcon className="w-6 h-6 text-white"/>
-          </div>
+          <img
+            src="https://drive.google.com/uc?export=view&id=958b7617-50c9-49ea-866d-7cdd425a5296"
+            alt="Nadia, MindVibe Assistant"
+            className="w-10 h-10 rounded-full"
+          />
           <div>
             <h1 className="text-xl font-bold text-white">MindVibe Business Assistant</h1>
-            <p className="text-sm text-indigo-300">Powered by Gemini</p>
+            <p className="text-sm text-indigo-300">Powered by MindVibe Works</p>
           </div>
         </div>
       </header>
@@ -104,9 +105,11 @@ const App: React.FC = () => {
           ))}
           {isLoading && messages[messages.length-1].sender === Sender.USER && (
              <div className="flex items-start space-x-4">
-               <div className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <BotIcon className="w-6 h-6 text-white" />
-                </div>
+               <img
+                  src="https://drive.google.com/uc?export=view&id=958b7617-50c9-49ea-866d-7cdd425a5296"
+                  alt="Nadia is typing..."
+                  className="w-10 h-10 rounded-full flex-shrink-0"
+                />
                <div className="bg-gray-700 rounded-lg p-3 mt-1 flex items-center space-x-2">
                  <span className="h-2 w-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
                  <span className="h-2 w-2 bg-indigo-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
