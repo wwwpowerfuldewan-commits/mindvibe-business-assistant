@@ -87,10 +87,11 @@ const App: React.FC = () => {
       <header className="bg-slate-800/50 backdrop-blur-sm shadow-lg p-4 z-10 border-b border-slate-700">
         <div className="max-w-4xl mx-auto flex items-center space-x-4">
           <img
-            src="https://drive.google.com/uc?export=view&id=958b7617-50c9-49ea-866d-7cdd425a5296"
-            alt="Nadia, MindVibe Assistant"
-            className="w-10 h-10 rounded-full"
-          />
+  src="/components/icons/958b7617-50c9-49ea-866d-7cdd425a5296-removebg-preview.png"
+  alt="Nadia, MindVibe Assistant"
+  className="w-12 h-12 rounded-full object-cover shadow-lg ring-2 ring-indigo-400/50"
+/>
+
           <div>
             <h1 className="text-xl font-bold text-white">MindVibe Business Assistant</h1>
             <p className="text-sm text-indigo-300">Powered by MindVibe Works</p>
